@@ -87,7 +87,7 @@ try {
 
     //get each key with its value
     obj[0].data.map((order) => {
-      //hadnel empty lines
+      //handling  empty lines
       if (order[0]) {
         let product = order[0].split(",");
         let productName = product[2];
@@ -147,8 +147,7 @@ try {
       }
     }
 
-    let highestValueFromEachBrand =
-      sortAndGetTheHiestValues(pubularProudctName);
+    const highestValueFromEachBrand =  sortAndGetTheHiestValues(pubularProudctName);
 
     //writing the result to the files
     writeToFile("0_order_log00.csv", productSet, 1, numberOfProduct);
